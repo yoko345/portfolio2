@@ -1,0 +1,320 @@
+body {
+  font-family: "Minion Pro", "Courier New", -apple-system, BlinkMacSystemFont, "Yu Gothic", YuGothic, Verdana, Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3000px;
+  width: 100%;
+  background-image: url(../img/bg.png);
+  background-size: 154px 119px;
+  opacity: 0.6;
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3000px;
+  background: #e9e9e9;
+	opacity: 0.3;
+}
+
+input[type="text"] {
+  text-align: center;
+}
+
+.num {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+.remove-num {
+  margin-top: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+p {
+  margin: 0;
+  font-size: 24px;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.col-lg-5 {
+  height: 1000px;
+  border-left: 1px dashed #bbb;
+  border-right: 1px dashed #bbb;
+}
+
+.left-container {
+  width: 400px;
+  margin: 30px auto 20px;
+}
+.left-container p {
+  line-height: 80px;
+}
+
+.left-container-flex {
+  display: flex;
+}
+
+.num-main {
+  width: 100px;
+  height: 80px;
+  font-size: 60px;
+}
+
+.left-container-btn {
+  width: 250px;
+  margin: 30px auto 40px;
+}
+.set-btn {
+  margin-top: 30px;
+  width: 250px;
+  height: 80px;
+  background: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 8px 0 rgb(158, 158, 158);
+}
+
+.set-btn p {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+#setting-btn.pressed {
+  box-shadow: 0 4px 0 rgb(158, 158, 158);
+  margin-top: 34px;
+  margin-bottom: -4px;
+}
+#reset-btn.pressed {
+  box-shadow: 0 4px 0 rgb(158, 158, 158);
+  margin-top: 34px;
+  margin-bottom: -4px;
+}
+
+
+.center-container {
+  width: 600px;
+  margin: 40px auto 0;
+  display: flex;
+}
+
+#result {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  border-radius: 5px;
+  padding-top: 80px;
+  font-size: 320px;
+}
+
+#result-display {
+  position: absolute;
+  transform: translate(15px,12px);
+  z-index: 1;
+}
+
+#lottery-btn {
+  width: 200px;
+  height: 200px;
+  background: #ef454a;
+  border-radius: 50%;
+  margin: 80px auto 0;
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  font-size: 42px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 0 #d1483e;
+  display: block;
+}
+
+.btn:hover{
+  opacity: 0.8;
+}
+
+#lottery-btn.pressed {
+  box-shadow: 0 5px 0 #d1483e;
+  margin-top: 85px;
+  margin-bottom: -5px;
+}
+
+#unlock {
+  width: 400px;
+  height: 100px;
+  margin: 30px auto 0;
+  background: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 rgb(158, 158, 158);
+}
+#unlock.unpressed {
+  box-shadow: 0 10px 0 rgb(158, 158, 158);
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+#unlock p {
+  font-size: 80px;
+  line-height: 100px;
+  opacity: 0.2;
+}
+#unlock.unpressed p {
+  opacity: 1;
+}
+
+
+#option {
+  margin-top: 10px;
+  font-size: 36px;
+}
+
+#allLottery-btn {
+  width: 200px;
+  height: 60px;
+  background: #00bfff;
+  border-radius: 20px;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 10px 0 #008fff;
+  display: block;
+  opacity: 0.7;
+}
+#allLottery-btn.pressed {
+  box-shadow: 0 5px 0 #008fff;
+  margin-top: 35px;
+  margin-bottom: -5px;
+  opacity: 0.7;
+}
+
+.right-container {
+  margin-top: 50px;
+  display: flex;
+}
+.right-container p {
+  line-height: 60px;
+}
+
+#display-speed {
+  margin-top: 40px;
+}
+input[type="range"]{
+  margin-top: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(0, 143, 255, 0.8);
+  height: 5px;
+  width: 300px;
+}
+input[type="range"]:focus,
+input[type="range"]:active {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border: 1px solid rgba(4, 72, 124, 0.5);
+  width: 18px;
+  height: 30px;
+  background-color: rgb(0, 143, 255);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+input[type="range"]:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(0, 143, 255, 0.6);
+}
+
+button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: none;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: #fff;
+  background-color: #00c2bc;
+  cursor: pointer;
+}
+
+#lottery-result {
+  margin-top: 10px;
+  margin-bottom: -20px;
+  font-size: 36px;
+  width: 100%;
+}
+#result-save {
+  margin-top: -2000px;
+  height: 100vh;
+  border-top: 1px dashed #bbb;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  position: relative;
+}
+#result-save div {
+  height: 220px;
+  width: 300px;
+  margin: 30px 10px 0 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #fff;
+}
+#result-num {
+  width: 220px;
+  text-align: center;
+  font-size: 180px;
+  position: absolute;
+  transform: translate(40px, 15px);
+}
+#attendence-number {
+  width: 80px;
+  font-size: 20px;
+  opacity: 0.7;
+  position: absolute;
+  transform: translate(5px,5px);
+  z-index: 1;
+}
+#attend-num {
+  width: 80px;
+  text-align: center;
+  font-size: 20px;
+  opacity: 0.7;
+  position: absolute;
+  transform: translate(5px,28px);
+  z-index: 1;
+}
+

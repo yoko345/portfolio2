@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>抽選</title>
+		<link rel="stylesheet" href="css/styles.css">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/styles.css">
+
+		<!-- for on scroll animations -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+		<!-- Minion Pro Font -->
+		<link href="//db.onlinewebfonts.com/c/fe9c236a1c142788cb16ec5238c7833e?family=Minion+Pro" rel="stylesheet" type="text/css"/>
+
+	</head>
+	<body>
+		<div class="bg"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="left-container left-container-flex">
+						<input type="text" class="num num-main" id="start" onclick="this.select()">
+						<p>&nbsp;〜&nbsp;</p>
+						<input type="text" class="num num-main" id="end" onclick="this.select()">
+					</div>
+					<div class="left-container left-container-flex" >
+						<p>抽選回数：</p>
+						<input type="text" class="num num-main" id="count" onclick="this.select()">
+					</div>
+					<div class="left-container">
+						<p>除く数（座席番号）</p>
+						<div class="remove-num">
+							<input type="text" class="num" id="remove-num1" onclick="this.select()">
+							<input type="text" class="num" id="remove-num2" onclick="this.select()">
+							<input type="text" class="num" id="remove-num3" onclick="this.select()">
+							<input type="text" class="num" id="remove-num4" onclick="this.select()">
+							<input type="text" class="num" id="remove-num5" onclick="this.select()">
+						</div>
+
+						<p>除く出席番号</p>
+						<div class="remove-num">
+							<input type="text" class="num" id="remove-attendNum1" onclick="this.select()">
+							<input type="text" class="num" id="remove-attendNum2" onclick="this.select()">
+							<input type="text" class="num" id="remove-attendNum3" onclick="this.select()">
+							<input type="text" class="num" id="remove-attendNum4" onclick="this.select()">
+							<input type="text" class="num" id="remove-attendNum5" onclick="this.select()">
+						</div>
+					</div>
+					<div class="left-container left-container-btn">
+						<div class="btn set-btn" id="setting-btn">
+							<p>設定</p>
+						</div>
+					</div>
+					<div class="left-container left-container-btn">
+						<div class="btn set-btn" id="reset-btn">
+							<p>リセット</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-5">
+					<div class="center-container">
+						<p id="result-display">結果</p>
+						<input type="text" id="result">
+					</div>
+					<div class="btn" id="lottery-btn">抽選</div>
+					<div class="center-container">
+						<div class="btn" id="unlock">
+							<p>unlock</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3">
+					<p id="option">Options</p>
+					<a href="#lotteryResultDisplay" class="btn" id="allLottery-btn">一括抽選</a>
+					<p id="display-speed">表示速度：<span id="speed-label">800</span> ms</p>
+					<input type="range" id="speed-num" value="800" min="100" max="1000" step="100">
+					<div class="right-container">
+						<p>結果一覧：</p>
+						<button id="download_csv" type="button">Download CSV</button>
+					</div>
+				</div>
+			</div>
+			<div id="result-save">
+				<a name="lotteryResultDisplay" id="lottery-result">抽選結果</a>
+			</div>
+		</div>
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+			<script src="js/main.js"></script>
+	</body>
+</html>
